@@ -1,0 +1,233 @@
+/* Colors https://coolors.co/f5fbef-09585d-9b315d-df6c53 */
+:root {
+    --main-white: #F5FBEF;
+    --main-violet: #9B315D;
+    --main-green: #09585D;
+    --main-red: #DF6C53;
+  }
+  
+  /* Base reset, box-sizing, font sizing */
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  *, 
+  *::before, 
+  *::after {
+    box-sizing: inherit;
+  }
+  
+  /* 
+  *default font size 16px = 100% = 1rem
+  *(100%/16px) * 10 = 62.5% = 10px = 1rem
+   */
+  html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+  }
+  
+  /*1200px / 16px = 75em */
+  @media (max-width: 75em) {
+    html {
+      font-size: 60%;
+    }
+  }
+  
+  /* 980px / 16px = 61.25em */
+  @media (max-width: 61.25em) {
+    html {
+      font-size: 58%;
+    }
+  }
+  
+  /* 460px /16px = 28.75em */
+  @media (max-width: 28.75em) {
+    html {
+      font-size: 54%;
+    }
+  }
+  
+  /* Base styles */
+  
+  body {
+    font-family: 'Silkscreen', sans-serif;
+    font-size: 1.8rem; /* 18px */
+    font-weight: 400;
+    font-style: normal;
+    line-height:1.3;
+    color: var(--main-white);
+  }
+  
+  h1,
+  h2 {
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 6rem;
+  }
+  
+  h2 {
+    font-size: 4.2rem;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--main-white)
+  }
+  
+  img {
+    display: block;
+    width:10%;
+  }
+  
+  /* nav */
+  .nav {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--main-red);
+  }
+  
+  @media (max-width:635px) {
+    .nav {
+      justify-content: center;
+    }
+  }
+  
+  .nav-list {
+    display: flex;
+    margin-right: 3rem;
+  }
+  
+  .nav-list  {
+    margin: 0 1rem;
+  }
+  
+  .nav-list a {
+    display: block;
+    font-size: 2.45rem;
+    padding: 2.5rem;
+  }
+  
+  .nav-list a:hover {
+    background: var(--main-green);
+  }
+  
+  /* Welcome section */
+  .welcome-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--main-green);
+    background-image: linear-gradient(180deg, #90EDF4 0%, var(--main-green) 100%
+    );
+  }
+  
+  .welcome-section > p {
+    font-size: 2.5rem;
+    font-style: italic;
+    color: var(--main-red);
+  }
+  
+  @media (max-width:545px) {
+    .welcome-section > h1 {
+      font-size: 4.5rem;
+    }
+  }
+  
+  @media (max-width:545px) {
+    .welcome-section > p {
+      font-size: 2rem;
+    }
+  }
+  
+  /* Projects section */
+  .projects-section {
+    text-align: center;
+    padding: 10rem 2rem;
+    background-color: var(--main-violet);
+    background-image: linear-gradient(180deg, var(--main-green) 0%, var(--main-violet) 100%
+    );
+  }
+  
+  .project-section-header {
+    max-width: 550px;
+    margin: 0 auto 5.5rem auto;
+    border-bottom: 0.5rem dashed var(--main-white);
+  }
+  
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 2.5rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+  }
+  
+  @media (max-width:1310px) {
+    .projects-grid {
+      max-width:950px;
+    }
+  }
+  
+  @media (max-width:880px) {
+    .projects-grid {
+      max-width:440px;
+    }
+  }
+  
+  @media (max-width: 30.5rem) {
+    .projects-section {
+      padding: 6rem 1rem;
+    }
+  }
+  
+  .project {
+    background: var(--main-violet);
+    border-radius: 4px;
+  }
+  
+  .code {
+    color: var(--main-violet);
+    transition: color 0.5s ease-out;
+  }
+  
+  .project:hover .code {
+    color: var(--main-red);
+  }
+  
+  .project-image {
+    height: clac(100% - 5rem);
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  /* Contact section */
+  .contact-section {
+    background: var(--main-violet);
+  }
+  
+  .contact-section-header > h2 {
+    margin: 0 auto 2.5rem auto;
+  }
+  
+  .contact-links {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 5rem;
+  }
